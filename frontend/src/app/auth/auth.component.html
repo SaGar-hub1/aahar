@@ -1,0 +1,82 @@
+<div class="flex justify-center h-screen items-center">
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+          <div class="front">
+            <img src="https://www.codingnepalweb.com/demos/login-and-registration-form-in-html-css/images/frontImg.jpg" alt="">
+            <div class="text">
+              <span class="text-1">Every new friend is a <br> new adventure</span>
+              <span class="text-2">Let's get connected</span>
+            </div>
+          </div>
+          <div class="back">
+            <img class="backImg" src="https://www.codingnepalweb.com/demos/login-and-registration-form-in-html-css/images/frontImg.jpg" alt="">
+            <div class="text">
+              <span class="text-1">Complete miles of journey <br> with one step</span>
+              <span class="text-2">Let's get started</span>
+            </div>
+          </div>
+        </div>
+        <div class="forms h-full">
+            <div class="form-content h-full">
+                <div class="login-form">
+                    <h1 class="text-lg  font-bold text-center pb-8 text-black">Signin</h1>
+                    <form class="form" [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+                        <div class="example-container">
+
+                            <mat-form-field class="w-full">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email">
+                              </mat-form-field>
+
+                              <mat-form-field class="w-full">
+                                <mat-label>password</mat-label>
+                                <input matInput formControlName="password">
+                              </mat-form-field>
+
+                          </div>
+                          
+                        
+                          <div>
+                            <button class="w-full" mat-flat-button type="submit">Submit</button>
+                          </div>
+                                <div class="text sign-up-text">Don't have an account? 
+                                    <label for="flip">Signup now</label>
+                                </div>
+                    </form>
+                </div>
+                <div class="signup-form">
+                    <h1 class="text-lg  font-bold text-center pb-8 text-black">Signup</h1>
+                <form class="form" [formGroup]="registerationForm" (ngSubmit)="handleRegister()">
+                    <div class="example-container">
+
+                        <mat-form-field class="w-full">
+                            <mat-label>fullName</mat-label>
+                            <input matInput formControlName="fullName">
+                          </mat-form-field>
+
+                        <mat-form-field class="w-full">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email">
+                          </mat-form-field>
+
+                          <mat-form-field class="w-full">
+                            <mat-label>password</mat-label>
+                            <input matInput formControlName="password">
+                          </mat-form-field>
+
+                      </div>
+                      
+                    
+                            <div>
+                              <button class="w-full" mat-flat-button type="submit">Submit</button>
+                            </div>
+                            <div class="text sign-up-text">Already have an account? 
+                                <label for="flip">Login now</label>
+                            </div>
+                </form>
+            </div>
+            </div>
+        </div>
+      </div>
+</div>  

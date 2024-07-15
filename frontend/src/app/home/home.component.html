@@ -1,0 +1,13 @@
+<div class="pb-5 pt-5">
+    <div class="flex justify-center flex-wrap gap-5">
+        @for (item of recipes; track $index) {
+            <app-recipe-card/>
+        }
+        
+    </div>
+    <div class="fixed bottom-10 right-10 ">
+        <button (click)="openrecipeform()" mat-fab color="primary">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+</div>

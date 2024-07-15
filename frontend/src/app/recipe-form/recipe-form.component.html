@@ -1,0 +1,29 @@
+<div class="card">
+    <form class="form" (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+            <mat-form-field class="full-width">
+              <mat-label>Title</mat-label>
+              <input matInput placeholder="Recipe Name" [(ngModel)]="recipeItem.title" name="title">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+              <mat-label>type</mat-label>
+              <input matInput placeholder=" Veg or Non Veg" [(ngModel)]="recipeItem.type" name="type">
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+              <mat-label>Image Url</mat-label>
+              <input matInput placeholder="URL"[(ngModel)]="recipeItem.imgurl" name="imgurl">
+            </mat-form-field>
+          
+            <mat-form-field class="full-width">
+              <mat-label>Description</mat-label>
+              <textarea matInput placeholder="Ex. How you make it..." [(ngModel)]="recipeItem.desc" name="desc"></textarea>
+            </mat-form-field>
+          
+        </div>
+                <div class="button-row" type="submit">
+                  <button mat-button>Submit</button>
+                </div>
+    </form>
+</div>
